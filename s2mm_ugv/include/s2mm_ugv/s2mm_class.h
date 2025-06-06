@@ -45,7 +45,7 @@ class S2MM_class{
             ros::param::param<double>("~init_y", init_y, 0.0);
             ros::param::param<double>("~init_th", init_th, 0.0);
 
-            ros::param::param<bool>("~publish_tf", publish_tf, true);
+            ros::param::param<bool>("~publish_tf", publish_tf, false);
             ros::param::param<string>("~output_folder", output_folder, "f_run");
             // cout << "output_folder: " << output_folder << endl;
 

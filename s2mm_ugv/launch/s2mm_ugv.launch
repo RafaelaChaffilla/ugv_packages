@@ -11,7 +11,6 @@
     <arg default="0" name="init_th" />
 
     <arg default="2" name="frequency" />
-    <arg default="true" name="publish_tf" />
 
     <node name="s2mm_ugv" output="screen" pkg="s2mm_ugv" type="s2mm_ugv_node">
         <param name="localization_topic" value="$(arg publish_to_topic)" />
@@ -22,7 +21,6 @@
         <param name="init_y" value="$(arg init_y)" />
         <param name="init_th" value="$(arg init_th)" />
         <param name="frequency" value="$(arg frequency)" />
-        <param name="publish_tf" value="$(arg publish_tf)" />
         <param name="output_folder" value="$(arg output_folder)" />
     </node>
 </launch>
