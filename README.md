@@ -4,7 +4,7 @@
 
 ### Description:
 
-UGV ROS packages for UAV-UGV collaboration for warehouse inventory missions found in https://github.com/RafaelaChaffilla/aerial_ground_robotic_system_for_warehouse_inventory.
+UGV ROS packages for UAV-UGV collaboration for warehouse inventory missions found in https://github.com/RafaelaChaffilla/aerial_ground_robotic_system_for_warehouse_inventory. These packages were designed for ROS Melodic.
 A description of each package is given in [Documentation](#documentation).
 
 ### Installation:
@@ -17,7 +17,7 @@ Perform the following steps to install these packages in your catkin_workspace:
 
 To integrate the localization and warehouse simulation, you can include the following spinnet within a desired launch file:
 
-    <include file="$(find ugv_localization)/launch/ugv_localization.launch"
+    <include file="$(find ugv_localization)/launch/ugv_localization.launch">
 	    <arg  name="simulation"  value="true"/>
 	    <arg  name="config"  value="8_areas_full_bottom"  />
 	    <arg  name="robot_name"  value="rovid"  />
@@ -31,7 +31,7 @@ where the parameters indicate:
  - *simulation*: True if the gazebo and sensor's noise nodes should be launched;
  - *config*: warehouse world configuration (8_areas_full_bottom, 8_areas_half_bottom or 8_areas_empty_bottom);
  - *robot_name*: name of robot, used for prefixes;
- - *init_x, init_y, init_th:* UGV's initial x, y, z and yaw positions in map frame;
+ - *init_x, init_y, init_z, init_th:* UGV's initial x, y, z and yaw positions in map frame;
 
 This file launches the gazebo simulation with the intended warehouse world model, launches the sensors noise simulation and the localization nodes, such that the transform from the map to the ugv frame is published in the /tf tree. 
 
