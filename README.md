@@ -15,7 +15,7 @@ Perform the following steps to install these packages in your catkin_workspace:
     cd ../
     catkin_make
 
-To integrate the localization and warehouse simulation, you can include the following spinnet within a desired launch file:
+To integrate the localization and warehouse simulation, you can include the following spinet within a desired launch file:
 
     <include file="$(find ugv_localization)/launch/ugv_localization.launch">
 	    <arg  name="simulation"  value="true"/>
@@ -80,4 +80,4 @@ This file launches the gazebo simulation with the intended warehouse world model
 		 - *frequency*: output frequency of the s2mm algorithm;
 	 - **Publishes to:**
 		 - "/rovid/s2mm_odom" or *publish_to_topic* defined in parameters: publishes the estimated UGV position in the map frame from the s2mm algorithm (nav_msgs/Odometry).
- 4. **ugv_localization**: Package that incapsulates the full localization algorithm in a single launch file. It also includes the gazebo world files for the different warehouse configurations and their respective maps.
+ 4. **ugv_localization**: Package that encapsulates the full localization algorithm in a single launch file. It also includes the gazebo world files for the different warehouse configurations and their respective maps.
